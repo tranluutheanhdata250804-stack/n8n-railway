@@ -1,8 +1,11 @@
+# Sử dụng image chính thức của n8n
 FROM n8nio/n8n:latest
 
-# Railway dùng port 5678
-ENV N8N_PORT=5678
+# Thư mục làm việc cho n8n
+WORKDIR /data
+
+# Mở port n8n
 EXPOSE 5678
 
-# Start n8n
-CMD ["n8n", "start"]
+# Chạy n8n
+CMD ["n8n"]
